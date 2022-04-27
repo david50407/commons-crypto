@@ -37,7 +37,7 @@ class OpenSsl11XNativeJna {
         Throwable thrown = null;
         try {
             final String libName = System.getProperty(Crypto.CONF_PREFIX + OpenSsl11XNativeJna.class.getSimpleName(),
-                    "crypto");
+                    "crypto.1.1");
             OpenSslJna.debug("Native.register('%s')%n", libName);
             Native.register(libName);
             ok = true;

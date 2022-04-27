@@ -43,7 +43,8 @@ class OpenSslNativeJna {
     public static final long VERSION_1_1_X = 0x10100000;
 
     static {
-        final String libraryName = System.getProperty(Crypto.CONF_PREFIX + OpenSslNativeJna.class.getSimpleName(), "crypto");
+			  // defaults to OpenSSL 1.1.x, change this via system property
+        final String libraryName = System.getProperty(Crypto.CONF_PREFIX + OpenSslNativeJna.class.getSimpleName(), "crypto.1.1");
         OpenSslJna.debug("NativeLibrary.getInstance('%s')%n", libraryName);
         final NativeLibrary crypto = NativeLibrary.getInstance(libraryName);
         Function version = null;

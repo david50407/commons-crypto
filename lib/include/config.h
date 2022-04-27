@@ -22,7 +22,7 @@
 #if defined(WINDOWS)
     #define COMMONS_CRYPTO_OPENSSL_LIBRARY "libcrypto.dll"
 #elif defined(MAC_OS)
-    #define COMMONS_CRYPTO_OPENSSL_LIBRARY "libcrypto.dylib"
+    #define COMMONS_CRYPTO_OPENSSL_LIBRARY "libcrypto.1.1.dylib"
 #else
     #define COMMONS_CRYPTO_OPENSSL_LIBRARY "libcrypto.so"
 #endif
